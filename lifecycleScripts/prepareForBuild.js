@@ -11,7 +11,7 @@ var generate = require(local("../generate"));
 module.exports = function prepareForBuild() {
 
   return new Promise(function(resolve, reject) {
-    cp.exec("npm install --ignore-scripts", function(err, stdout, stderr) {
+    cp.exec("sudo npm install --ignore-scripts", function(err, stdout, stderr) {
       if (err) {
         console.error(stderr);
         reject(err, stderr);
