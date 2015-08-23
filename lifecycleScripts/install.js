@@ -111,7 +111,7 @@ function build() {
     target = "--target=" + nwVersion;
   }
 
-  return exec("npm install --ignore-scripts")
+  return exec("sudo npm install --ignore-scripts")
     .then(function() {
       builder = path.resolve(".", "node_modules", ".bin", builder);
       builder = builder.replace(/\s/g, "\\$&");
